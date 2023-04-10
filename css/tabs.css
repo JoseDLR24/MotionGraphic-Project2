@@ -1,0 +1,121 @@
+body { 
+	margin: 0; 
+	padding: 0; 
+	font: 1em "Trebuchet MS", verdana, arial, sans-serif; font-size: 100%;
+	background: #80dbff;
+}
+
+div.container { 
+	margin: auto; 
+	width: 80%; 
+}
+
+h1 {
+	color: white;
+	text-shadow: 0 1px 0 #eee;
+	margin: 80px 0;
+	font-size: 50px;
+}
+ul.tabNavigation {
+    list-style: none;
+    margin: 0 0 0 25px;
+    padding: 0;
+}
+
+ul.tabNavigation li {
+    display: inline;
+	margin: 0;
+}
+
+ul.tabNavigation li a {
+    padding: 10px 10px 0 10px;
+    background-color: #ddd;
+    color: #000;
+    text-decoration: none;
+	border: 1px solid #888;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+ul.tabNavigation li a:hover {
+	background-color: #eee;
+}	
+
+ul.tabNavigation li a.selected {
+    background-color: #FFF;
+    color: #333;
+	border-bottom: 1px solid #FFF;
+}
+	
+ul.tabNavigation li a:focus {
+	outline: 0;
+}
+
+div.tabs > div {
+	padding: 25px;
+	border: 1px solid #888;
+    background-color: #FFF;
+	border-radius: 5px;
+}
+
+div.tabs > div h2 {
+	margin-top: 0;
+}
+		
+.waste {
+	min-height: 1000px;
+}
+
+/* ------------------------------ */
+/* Define the animation so the H1 moves infinitely to the right */
+@keyframes move-heading {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(80%);
+	}
+	}
+
+	/* Apply the animation to the heading */
+	.animated-heading {
+	animation: move-heading 4s linear infinite;
+	}
+
+/* RAINDROP EFFECT */
+/* Define the keyframes for the animation */
+@keyframes raindrop {
+    0% {
+      transform: translateY(-50px); /* move the letters up */
+      opacity: 0; /* make the letters invisible */
+    }
+    100% {
+      transform: translateY(0); /* bring the letters back to their original position */
+      opacity: 1; /* make the letters visible */
+    }
+}
+
+  /* Apply the animation to the p tag */
+p {
+    animation-name: raindrop; /* set the animation name */
+    animation-duration: 1s; /* set the duration of the animation */
+    animation-timing-function: ease-in-out; /* set the timing function */
+    animation-iteration-count: 1; /* set the number of times the animation should run */
+}
+
+/* background change color */
+
+/* CSS for the page background animation */
+#page {
+	background-color: lightsalmon;
+	transition: background-color 1.5s ease-out;
+}
+#page.lightgreen {
+	background-color: lightgreen;
+}
+#page.purple {
+	background-color: purple;
+}
+#page.lightseagreen {
+	background-color: lightseagreen;
+}
