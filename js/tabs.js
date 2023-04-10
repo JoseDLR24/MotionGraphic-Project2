@@ -50,3 +50,18 @@ function getColorClass(index) {
 for (let i = 0; i < tabs.length; i++) {
 	tabs[i].addEventListener('click', changeTab);
 }
+
+// JS code to change the color of the divider to math the color of the background
+window.addEventListener('load', function() {
+    var tabNav = document.querySelector('.tabNavigation');
+    var divider = document.querySelector('.divider');
+    divider.style.backgroundColor = getComputedStyle(tabNav).backgroundColor;
+});
+
+$(document).ready(function() {
+	setInterval(function() {
+		$('h1.animated-heading').fadeOut(1000, function() {
+			$(this).fadeIn(1000);
+		});
+	}, 3000);
+});
